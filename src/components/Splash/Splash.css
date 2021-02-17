@@ -1,0 +1,10 @@
+.splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #BADDDA;
+}
+
+.svg--reduce-size {
+  height: 70vh;
+}

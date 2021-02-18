@@ -1,17 +1,9 @@
 import React from 'react';
 import Card from './Card';
-import './CardList.css';
-import { Link } from "react-tiger-transition";
 
 const CardList = ({ inventory }) => {
   return(
-  <div>
-    <nav>
-      <Link to="/" transition='default-fade'>
-        <h3>Back to home page</h3>
-      </Link>
-      <br></br>
-    </nav>
+    <div className="flex_container flex_row flex_center">
     {
       inventory.map(rabbit => {
         return (

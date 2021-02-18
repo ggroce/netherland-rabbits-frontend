@@ -16,15 +16,14 @@ function Layout(props) {
     <div id="parent">
       <Header />
       <Sidebar history={props.history}/>
-
-      {/* {place another scroll-wrapper here to properly place footer?} */}
       <main>
-        <div className="scroll-wrapper">
-            {props.children}
+      <div className="scroll-wrapper">
+        <div>
+          {props.children}
         </div>
+          <Footer />
+      </div>
       </main>
-      <Footer />
-
     </div>
   )
 }

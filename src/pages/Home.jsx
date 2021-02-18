@@ -7,24 +7,26 @@ function Home(props) {
     <>
       <div className="flex_container flex_column flex_center">
         <Splash />
-        <div className="child_container">
-        <p>child div container 1</p>
-      </div>
-      <div className="child_container">
-        <p>child div container 2</p>
-      </div>
-      <div className="child_container">
-        <p>child div container 3</p>
-      </div>
-      <div className="child_container">
-        <p>child div container 4</p>
-      </div>
-      <div className="child_container">
-        <p>child div container 1</p>
-      </div>
-      <div className="child_container">
-        <p>child div container 2</p>
-      </div>
+        <div className="flex_container flex_row flex_center">
+          <div className="child_container">
+          <p>child div container 1</p>
+          </div>
+          <div className="child_container">
+            <p>child div container 2</p>
+          </div>
+          <div className="child_container">
+            <p>child div container 3</p>
+          </div>
+          <div className="child_container">
+            <p>child div container 4</p>
+          </div>
+          <div className="child_container">
+            <p>child div container 1</p>
+          </div>
+          <div className="child_container">
+            <p>child div container 2</p>
+          </div>
+        </div>
       </div>
     </>
   );

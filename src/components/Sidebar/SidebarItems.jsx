@@ -12,8 +12,8 @@ const SidebarItems = [
     route: '/page2', 
   },
   {
-    name: 'Page 3', 
-    route: '/page3', 
+    name: 'About', 
+    route: '/about', 
   },
 ];
 

@@ -160,21 +160,6 @@ footer {
   filter: drop-shadow(3px 1px 3px #636161);
 }
 
-#rabbit-card {
-  min-height: 2.5em;
-  min-width: 15em;
-  max-width: 20em;
-  max-height: 30em;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 5px;
-  border-color: #000000;
-  background-color: #F9F3DB;
-  margin: 10px;
-  padding-left: var(--content-spacer);
-  filter: drop-shadow(3px 1px 3px #636161);
-}
-
 .scroll-wrapper {
   display: flex;
   flex-flow: row wrap;
@@ -224,6 +209,13 @@ footer {
   100% {
       opacity: 1;
   }
+}
+
+.grow {
+  transition: all .2s ease-in-out; 
+}
+.grow:hover {
+  transform: scale(1.04);
 }
 
 @media screen and (min-width: 40em) {

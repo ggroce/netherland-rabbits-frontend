@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import CardList from '../components/CardList';
 
-function Page3(props) {
+function About(props) {
   const { isPending, inventory, err } = useSelector((state) => state.requestInventory);
 
   return(
@@ -12,4 +12,4 @@ function Page3(props) {
   );
 }
 
-export default Page3;
+export default About;

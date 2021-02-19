@@ -4,7 +4,6 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { requestInventory } from './reducers';
-import 'tachyons';
 
 import './index.css';
 import Routes from './containers/Routes';

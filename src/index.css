@@ -3,6 +3,7 @@
 :root {
   font-size: calc(1em + 1vw);
   --header-height: 3em;
+  --header-border-width: 2px;
   --footer-height: 5em;
   --content-spacer: 1em;
   --sidebar-width: 0;
@@ -37,32 +38,27 @@ html, body {
   height: 100%;
   width: 100%;
   background-color: #BADDDA;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 main {
-  margin-top: calc(var(--header-height) + (var(--content-spacer)));
-  margin-bottom: var(--content-spacer);
   margin-left: 0;
-  /* min-height: calc(100vh - var(--header-height) - var(--content-spacer)); */
-  z-index: 1;
-  overflow-y: auto;
   animation-name: fadeIn;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
   animation-duration: 2s;
   animation-fill-mode: forwards;
+  z-index: 1;
+  /* overflow-y: auto; */
 }
 
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   height: var(--header-height);
   width: 100%;
   margin-left: 0px;
   border: #4A4737;
-  border-width: 2px;
+  border-width: var(--header-border-width);
   border-style: dashed;
   background-color: #B0AB99;
   overflow: hidden;
@@ -74,6 +70,7 @@ header {
 }
 
 .header-nav-wrapper {
+
   display: flex;
   align-items: center;
   margin: 0;
@@ -88,7 +85,6 @@ header li {
 }
 
 .push_right {
-  /* margin-left: calc(100vw - 500px); */
   position: absolute;
   right: calc(var(--sidebar-width) + var(--content-spacer) + var(--content-spacer));
 }
@@ -198,7 +194,7 @@ footer {
 }
 
 .drop-shadow {
-  /* for transparent images */
+  /* for transparent images ?*/
   filter: drop-shadow(3px 6px 9px #636161);
 }
 
@@ -220,6 +216,11 @@ footer {
 
 .spacer {
   height: calc(var(--content-spacer) * 2);
+}
+
+.header-hidden-spacer {
+  visibility: hidden;
+  height: calc(var(--header-height) + (var(--header-border-width) * 2));
 }
 
 @media screen and (min-width: 40em) {
@@ -245,19 +246,12 @@ footer {
     display: block;
   }
   main {
-    /* min-height: calc(100vh - var(--header-height)); */
-    /* min-height: calc(100vh - var(--header-height) - var(--footer-height) - (var(--content-spacer) * 4)); */
-    margin-top: calc(var(--header-height) + (var(--content-spacer) * 3));
     margin-left: var(--sidebar-width);
-    /* padding-left: var(--content-spacer); */
   }
   .scroll-wrapper {
     height: calc(100vh - var(--header-height));
     min-height: calc(100vh - var(--header-height));
   }
-  /* footer {
-    margin-left: var(--sidebar-width);
-  } */
   .child_container {
     min-height: 4.5em;
   }

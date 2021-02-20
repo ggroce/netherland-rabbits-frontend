@@ -1,31 +1,23 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Splash from '../components/Splash/Splash';
-import styled from 'styled-components';
+import CardList from '../components/CardList';
 
 function Home(props) {
+  const { isPending, inventory, err } = useSelector((state) => state.requestInventory);
+  const handleLinkClick = () => {
+    document.getElementById("seeInventory").scrollIntoView({ behavior: "smooth" });
+  };
+
   return(
     <>
       <div className="flex_container flex_column flex_center">
-        <Splash />
+        <div onClick={handleLinkClick}>
+          <Splash />
+        </div>
+        <div id="seeInventory" className="spacer"/>
         <div className="flex_container flex_row flex_center">
-          <div className="child_container">
-          <p>child div container 1</p>
-          </div>
-          <div className="child_container">
-            <p>child div container 2</p>
-          </div>
-          <div className="child_container">
-            <p>child div container 3</p>
-          </div>
-          <div className="child_container">
-            <p>child div container 4</p>
-          </div>
-          <div className="child_container">
-            <p>child div container 1</p>
-          </div>
-          <div className="child_container">
-            <p>child div container 2</p>
-          </div>
+          <CardList inventory={inventory} />
         </div>
       </div>
     </>

@@ -17,13 +17,13 @@ html, body {
   position: relative;
   background-color: #322F1D;
   font-family: 'Benne', serif;
-  scroll-behavior: smooth;
   overflow: hidden;
   animation-name: fadeIn;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
   animation-duration: 1s;
   animation-fill-mode:forwards;
+  scroll-behavior: smooth;
 /*
   font-size-adjust: none;
   text-size-adjust: none;
@@ -216,6 +216,10 @@ footer {
 }
 .grow:hover {
   transform: scale(1.04);
+}
+
+.spacer {
+  height: calc(var(--content-spacer) * 2);
 }
 
 @media screen and (min-width: 40em) {

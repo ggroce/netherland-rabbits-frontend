@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Splash from '../components/Splash/Splash';
 import CardList from '../components/CardList';
@@ -9,6 +9,17 @@ function Home(props) {
   const handleLinkClick = () => {
     document.getElementById("seeInventory").scrollIntoView({ behavior: "smooth" });
   };
+
+  useEffect(() => {
+    let cardArray = document.getElementsByClassName('flip-wrapper');
+
+    Array.from(cardArray).forEach((card) => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('card--flipped');
+        console.log("Card clicked!");
+      });
+    });
+  }, [inventory]);
 
   return(
     <>

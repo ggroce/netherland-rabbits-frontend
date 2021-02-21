@@ -5,6 +5,7 @@ import CardList from '../components/CardList';
 
 function Home(props) {
   const { isPending, inventory, err } = useSelector((state) => state.requestInventory);
+  
   const handleLinkClick = () => {
     document.getElementById("seeInventory").scrollIntoView({ behavior: "smooth" });
   };

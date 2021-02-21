@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { requestInventory } from '../actions';
 import Layout from './Layout';
 import Page1 from '../pages/Page1';
@@ -11,7 +11,7 @@ import NotFound from '../pages/NotFound';
 
 function Routes() {
   const dispatch = useDispatch();
-  const { isPending, inventory, err } = useSelector((state) => state.requestInventory);
+  // const { isPending, inventory, err } = useSelector((state) => state.requestInventory);
 
   useEffect(() => {
     onRequestInventory();
@@ -30,8 +30,7 @@ function Routes() {
             <Route path="/home" exact component={Home} />
             <Route path="/page1" component={Page1} />
             <Route path="/page2" component={Page2} />
-            <Route path="/about" component={About
-          } />
+            <Route path="/about" component={About} />
             <Route component={NotFound} />
           </Switch>
         </Layout>

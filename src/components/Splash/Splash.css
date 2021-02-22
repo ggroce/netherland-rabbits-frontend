@@ -1,5 +1,6 @@
 .splash-wrapper {
   height: calc(100vh - (var(--header-height)));
+  width: auto;
 }
 
 .splash {
@@ -12,4 +13,13 @@
 .svg--reduce-size {
   height: 82vh;
   width: 80vw;
+}
+
+#svg-oldtree * {
+  fill-opacity: 0;
+  transition: fill-opacity 1s;
+}
+
+#svg-oldtree.finished * {
+  fill-opacity: 1;
 }

@@ -1,13 +1,13 @@
 import React from 'react';
 import Card from './Card/Card';
 import Tilt from 'react-parallax-tilt';
-import ScrollTrigger from 'react-scroll-trigger';
+import Fade from 'react-reveal/Fade';
 import './CardList.css';
 
 const CardList = ({ inventory }) => {
-  const fadeinCard = () => {
-    // document.querySelector(".innerclass").classList.toggle('visible');
-    // document.getElementsByClassName("splash-wrapper")[0].style.display = "none";
+
+  const getRandNum = () => {
+    return Math.floor((Math.random() * 500) + 1);
   }
 
   return(
@@ -15,19 +15,19 @@ const CardList = ({ inventory }) => {
     {
       inventory.map(rabbit => {
         return (
-          // <ScrollTrigger onEnter={fadeinCard}>
           <Tilt className="tilt-wrapper"tiltMaxAngleX={6} scale={1.06}>
-            <Card 
-            key={rabbit.name}
-            name={rabbit.name}
-            type={rabbit.type}
-            DOB={rabbit.DOB}
-            awards={rabbit.awards}
-            status={rabbit.status}
-            sex={rabbit.sex}
-            />
+            <Fade bottom delay={getRandNum()}>
+              <Card 
+              key={rabbit.name}
+              name={rabbit.name}
+              type={rabbit.type}
+              DOB={rabbit.DOB}
+              awards={rabbit.awards}
+              status={rabbit.status}
+              sex={rabbit.sex}
+              />
+            </Fade>
           </Tilt>
-          // </ScrollTrigger>
         );
       })
     }

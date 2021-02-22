@@ -31,15 +31,6 @@
   transform-style: preserve-3d;
 }
 
-/* .flip-wrapper:hover .flip-wrapper-inner {
-  transform: rotateY(180deg);
-} */
-
-/* .flip-wrapper:hover .card-front, .flip-wrapper:hover .card-back {
-  box-shadow: 4px 8px 8px 8px rgba( 0, 0, 0, .3 );
-  z-index: 2;
-} */
-
 .card-front, .card-back {
   position: absolute;
   text-align: center;

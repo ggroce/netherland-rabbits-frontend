@@ -1,9 +1,10 @@
 import React from 'react';
-
+import Fade from 'react-reveal/Fade';
 function Page1(props) {
 
   return(
     <>
+    <Fade>
       <div className="flex_container flex_row flex_center">
         <div className="child_container">
           <p>child div container 1</p>
@@ -42,6 +43,7 @@ function Page1(props) {
           <p>child div container 4</p>
         </div>
       </div>
+      </Fade>
     </>
   );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import './Card.css';
 
 const Card = ({ name, type, DOB, awards, status, sex }) => {
+
   return(
     <>
     <div className="flip-wrapper">

@@ -2,3 +2,9 @@
   box-shadow: 4px 9px 12px 5px rgba( 0, 0, 0, .3 );
   z-index: 2;
 }
+
+.visible {
+  opacity: 1;
+  /* visibility: visible; */
+  transition: 0.5s opacity, 0 0.5s;
+}

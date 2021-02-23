@@ -8,18 +8,7 @@ function Home(props) {
   
   const handleLinkClick = () => {
     document.getElementById("seeInventory").scrollIntoView({ behavior: "smooth" });
-    // document.getElementsByClassName("splash-wrapper")[0].style.display = "none";
   };
-
-  useEffect(() => {
-    let cardArray = document.getElementsByClassName('flip-wrapper');
-    Array.from(cardArray).forEach((card) => {
-      card.addEventListener('click', () => {
-        card.classList.toggle('card--flipped');
-        console.log("Card clicked!");
-      });
-    });
-  }, [inventory]);
 
   return(
     <>
@@ -32,6 +21,7 @@ function Home(props) {
           <CardList inventory={inventory} />
         </div>
       </div>
+      <div className="spacer" />
     </>
   );
 }

@@ -7,7 +7,7 @@ import './CardList.css';
 const CardList = ({ inventory }) => {
 
   const getRandNum = () => {
-    return Math.floor((Math.random() * 500) + 1);
+    return Math.floor((Math.random() * 250) + 1);
   }
 
   return(

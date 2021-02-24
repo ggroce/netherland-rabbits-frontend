@@ -2,12 +2,14 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { sendInquiryForm } from '../../actions'
 
-const InquiryForm = ({ name }) => {
+function InquiryForm({ name }) {
+  
   const dispatch = useDispatch();
   const onSendInquiryForm = () => {
     dispatch(sendInquiryForm());
   }
-  const { isPending, sendSuccess, err } = useSelector((state) => state.InquiryForm);
+
+  const { isPending, sendSuccess, err } = useSelector((state) => state.sendInquiryForm);
 
   return(
     <>

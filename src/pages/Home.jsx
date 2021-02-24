@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import Splash from '../components/Splash/Splash';
 import CardList from '../components/CardList/CardList';

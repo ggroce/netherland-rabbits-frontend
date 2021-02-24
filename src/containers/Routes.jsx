@@ -11,7 +11,6 @@ import NotFound from '../pages/NotFound';
 
 function Routes() {
   const dispatch = useDispatch();
-  // const { isPending, inventory, err } = useSelector((state) => state.requestInventory);
 
   useEffect(() => {
     onRequestInventory();

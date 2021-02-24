@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { sendInquiryForm } from '../../actions'
 
 function InquiryForm({ name }) {
-  
+
   const dispatch = useDispatch();
   const onSendInquiryForm = () => {
     dispatch(sendInquiryForm());
@@ -17,18 +17,24 @@ function InquiryForm({ name }) {
       <h5 style={{marginTop: "0", marginLeft: "1rem", marginBottom: "0"}}>Please let us know!</h5>
       <form action="">
           <p>
-            <label htmlFor="firstLastName">
-              First and last name: <br />
-              <input type="text" />
+            <label htmlFor="name">
+              Name: <br />
+              <input type="text" id="name" required/>
             </label>
           </p>
           <p>
-            <label htmlFor="emailAddress">
+            <label htmlFor="email">
               Email address: <br /> 
-              <input type="text" />
+              <input type="text" id="email" required/>
             </label>
           </p>
-          <button>test</button>
+          <p>
+            <label htmlFor="message">
+              Message: <br /> 
+              <input type="text" id="message" />
+            </label>
+          </p>
+          <button type="submit">test</button>
           <input type="submit" value="Submit" />
         </form>
     </>

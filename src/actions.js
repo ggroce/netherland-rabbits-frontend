@@ -25,7 +25,7 @@ export const requestInventory = () => (dispatch) => {
   }());
 }
 
-export const sendInquiryForm = () => (dispatch) => {
+export const sendInquiryForm = (formName, formEmail, formMessage) => (dispatch) => {
   dispatch({ type: SEND_INQUIRYFORM_PENDING });
 
   (async function () {

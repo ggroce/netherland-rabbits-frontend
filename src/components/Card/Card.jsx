@@ -10,10 +10,9 @@ const Card = ({ name, type, DOB, awards, status, sex }) => {
   const onCloseModal = () => setOpen(false);
 
  const rotateCard = (e) => {
-    if (e.target.id === 'inquire-button') {
-    } else {
+    if (e.target.id !== 'inquire-button') {
       e.currentTarget.classList.toggle('card--flipped');
-    }
+    } 
   }
 
   return(
@@ -35,7 +34,7 @@ const Card = ({ name, type, DOB, awards, status, sex }) => {
               <p><strong>Sex: </strong>{sex}</p>
             </div>
           <div>
-            <button id="inquire-button" onClick={onOpenModal} style={{marginTop: "1.5rem", marginRight: ".5rem"}}>Click  here to inquire</button>
+            <button id="inquire-button" onClick={() => setOpen(true)} style={{marginTop: "1.5rem", marginRight: ".5rem"}}>Click  here to inquire</button>
           </div>
         </article>
 
@@ -50,13 +49,25 @@ const Card = ({ name, type, DOB, awards, status, sex }) => {
       </div>
     </div>
 
-    <Modal open={open} onClose={onCloseModal} center>
-      <h2>Simple centered modal</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-        pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet
-        hendrerit risus, sed porttitor quam.
-      </p>
+    <Modal open={open} onClose={() => setOpen(false)} center>
+      <h4 style={{marginTop: ".4rem", marginBottom: "0"}}>Interested in {name}?</h4>
+      <h5 style={{marginTop: "0", marginLeft: "1rem", marginBottom: "0"}}>Please let us know!</h5>
+      <form action="">
+          <p>
+            <label htmlFor="firstLastName">
+              First and last name: <br />
+              <input type="text" />
+            </label>
+          </p>
+          <p>
+            <label htmlFor="emailAddress">
+              Email address: <br /> 
+              <input type="text" />
+            </label>
+          </p>
+          <button>test</button>
+          <input type="submit" value="Submit" />
+        </form>
     </Modal>
     </>
   );

@@ -180,9 +180,23 @@ header li {
   align-items: center;
 }
 
+.div-info {
+  padding: 1rem;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #000000;
+  background-color: #F9F3DB;
+}
+
 .drop-shadow {
   /* for transparent images ?*/
   filter: drop-shadow(3px 6px 9px #636161);
+}
+
+.stitching {
+  outline: 1px dashed #000000;
+  outline-offset: -7px;
 }
 
 @keyframes fadeIn {

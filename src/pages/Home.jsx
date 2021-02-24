@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Splash from '../components/Splash/Splash';
-import CardList from '../components/CardList';
+import CardList from '../components/CardList/CardList';
 
 function Home(props) {
   const { isPending, inventory, err } = useSelector((state) => state.requestInventory);

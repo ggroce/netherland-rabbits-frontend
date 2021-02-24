@@ -75,11 +75,6 @@
   text-align: center;
 }
 
-.stitching {
-  outline: 1px dashed #000000;
-  outline-offset: -7px;
-}
-
 .card-front hr,  .card-back hr {
   margin-right: auto; 
   margin-left: auto;

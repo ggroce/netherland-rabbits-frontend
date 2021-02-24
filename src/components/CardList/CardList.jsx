@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card/Card';
+import Card from '../Card/Card';
 import Tilt from 'react-parallax-tilt';
 import Fade from 'react-reveal/Fade';
 import './CardList.css';

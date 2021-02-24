@@ -1,13 +1,16 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import CardList from '../components/CardList';
+import Fade from 'react-reveal/Fade';
 
 function About(props) {
-  const { isPending, inventory, err } = useSelector((state) => state.requestInventory);
 
   return(
     <>
-      <CardList inventory={inventory} />
+    <Fade>
+      <div className="spacer" />
+      <div className="div-info stitching drop-shadow ">
+        <p>Information about Labelle Rabbitry.</p>
+      </div>
+    </Fade>
     </>
   );
 }

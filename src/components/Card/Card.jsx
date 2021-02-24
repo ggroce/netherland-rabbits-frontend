@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import './Card.css';
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
+import './Card.css';
+import InquiryForm from '../InquiryForm/InquiryForm';
+// import InquiryForm from '../InquiryForm/InquiryForm';
 
 const Card = ({ name, type, DOB, awards, status, sex }) => {
   const [open, setOpen] = useState(false);
@@ -50,24 +52,7 @@ const Card = ({ name, type, DOB, awards, status, sex }) => {
     </div>
 
     <Modal open={open} onClose={() => setOpen(false)} center>
-      <h4 style={{marginTop: ".4rem", marginBottom: "0"}}>Interested in {name}?</h4>
-      <h5 style={{marginTop: "0", marginLeft: "1rem", marginBottom: "0"}}>Please let us know!</h5>
-      <form action="">
-          <p>
-            <label htmlFor="firstLastName">
-              First and last name: <br />
-              <input type="text" />
-            </label>
-          </p>
-          <p>
-            <label htmlFor="emailAddress">
-              Email address: <br /> 
-              <input type="text" />
-            </label>
-          </p>
-          <button>test</button>
-          <input type="submit" value="Submit" />
-        </form>
+      <InquiryForm name={name}/>
     </Modal>
     </>
   );

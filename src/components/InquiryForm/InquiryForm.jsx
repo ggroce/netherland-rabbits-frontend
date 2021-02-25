@@ -7,12 +7,12 @@ function InquiryForm({ name }) {
   const [formEmail, setFormEmail] = useState('');
   const [formMessage, setFormMessage] = useState('');
 
+  const { isPending, err } = useSelector((state) => state.sendInquiryForm);
+
   const dispatch = useDispatch();
   const onSendInquiryForm = () => {
     dispatch(sendInquiryForm(formName, formEmail, formMessage));
   }
-
-  const { isPending, err } = useSelector((state) => state.sendInquiryForm);
 
   return(
     <>
@@ -34,7 +34,7 @@ function InquiryForm({ name }) {
             <label htmlFor="email">
               Email address: <br /> 
               <input 
-                type="text" 
+                type="email" 
                 id="email" 
                 value={formEmail}
                 onChange={e => setFormEmail(e.target.value)} 
@@ -43,9 +43,13 @@ function InquiryForm({ name }) {
           </p>
           <p>
             <label htmlFor="message">
-              Message: <br /> 
-              <input 
+              <h5 style={{marginBottom: "0"}}>Share a bit about yourself 
+                <br />
+                (area you're from, experience with rabbits):  
+              </h5>
+              <textarea 
                 type="text" 
+                rows="5" 
                 id="message" 
                 value={formMessage}
                 onChange={e => setFormMessage(e.target.value)} />
@@ -53,6 +57,8 @@ function InquiryForm({ name }) {
           </p>
           <button type="submit">test</button>
           <input type="submit" value="Submit" />
+          <br />
+          Please be sure and read our pet and shipping policy!
         </form>
     </>
   );

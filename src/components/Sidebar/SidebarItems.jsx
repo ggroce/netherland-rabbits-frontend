@@ -8,8 +8,8 @@ const SidebarItems = [
     route: '/page1', 
   },
   {
-    name: 'Page 2', 
-    route: '/page2', 
+    name: 'Policies', 
+    route: '/policies', 
   },
   {
     name: 'About', 

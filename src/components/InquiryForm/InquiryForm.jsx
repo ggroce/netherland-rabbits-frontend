@@ -3,15 +3,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { sendInquiryForm } from '../../actions'
 
 function InquiryForm({ name }) {
-  const [formName, setFormName] = useState('');
-  const [formEmail, setFormEmail] = useState('');
-  const [formMessage, setFormMessage] = useState('');
+  const [custName, setCustName] = useState('');
+  const [custEmail, setCustEmail] = useState('');
+  const [custMessage, setCustMessage] = useState('');
 
   const { isPending, err } = useSelector((state) => state.sendInquiryForm);
 
   const dispatch = useDispatch();
   const onSendInquiryForm = () => {
-    dispatch(sendInquiryForm(formName, formEmail, formMessage));
+    dispatch(sendInquiryForm(custName, custEmail, custMessage));
   }
 
   return(
@@ -25,8 +25,8 @@ function InquiryForm({ name }) {
               <input 
                 type="text" 
                 id="name" 
-                value={formName}
-                onChange={e => setFormName(e.target.value)} 
+                value={custName}
+                onChange={e => setCustName(e.target.value)} 
                 required/>
             </label>
           </p>
@@ -36,8 +36,8 @@ function InquiryForm({ name }) {
               <input 
                 type="email" 
                 id="email" 
-                value={formEmail}
-                onChange={e => setFormEmail(e.target.value)} 
+                value={custEmail}
+                onChange={e => setCustEmail(e.target.value)} 
                 required/>
             </label>
           </p>
@@ -51,8 +51,8 @@ function InquiryForm({ name }) {
                 type="text" 
                 rows="5" 
                 id="message" 
-                value={formMessage}
-                onChange={e => setFormMessage(e.target.value)} />
+                value={custMessage}
+                onChange={e => setCustMessage(e.target.value)} />
             </label>
           </p>
           <button type="submit">test</button>

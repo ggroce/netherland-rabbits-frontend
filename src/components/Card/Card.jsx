@@ -50,7 +50,7 @@ const Card = ({ rabbitName, rabbitType, rabbitDOB, rabbitAwards, rabbitStatus, r
       </div>
     </div>
 
-    <Modal open={open} onClose={() => setOpen(false)} center>
+    <Modal open={open} onClose={onCloseModal} center classNames={{modal: 'div-info stitching drop-shadow'}} focusTrapped={true}>
       <InquiryForm rabbitName={rabbitName} onCloseModal={onCloseModal}/>
     </Modal>
     </>

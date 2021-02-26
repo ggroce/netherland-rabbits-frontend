@@ -1,0 +1,32 @@
+.div-info {
+  padding: 1rem;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #000000;
+  background-color: #F9F3DB;
+}
+
+.drop-shadow {
+  /* for transparent images ?*/
+  filter: drop-shadow(3px 6px 9px #636161);
+}
+
+.stitching {
+  outline: 1px dashed #000000;
+  outline-offset: -7px;
+}
+
+input {
+  height: 1.1rem;
+}
+
+textarea {
+  width: 15rem;
+}
+
+form button {
+  padding: .5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}

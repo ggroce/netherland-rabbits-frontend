@@ -100,17 +100,3 @@ button {
   color: #F9F3DB;
   padding: .2rem;
 }
-
-form button {
-  padding: .5rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-input {
-  height: 1.1rem;
-}
-
-textarea {
-  width: 15rem;
-}

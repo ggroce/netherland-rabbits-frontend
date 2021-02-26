@@ -10,6 +10,7 @@ const initialStateInventory = {
 
 const initialStateInquiryForm = {
   isPending: false, 
+  isSuccess: false, 
   err: '',
 }
 
@@ -29,11 +30,11 @@ export const requestInventory = (state=initialStateInventory, action={}) => {
 export const sendInquiryForm = (state=initialStateInquiryForm, action={}) => {
   switch(action.type) {
     case SEND_INQUIRYFORM_PENDING:
-      return Object.assign({}, state, { isPending: true });
+      return Object.assign({}, state, { isPending: true, isSuccess: false });
     case SEND_INQUIRYFORM_SUCCESS:
-      return Object.assign({}, state, { isPending: false });
+      return Object.assign({}, state, { isPending: false, isSuccess: true });
     case SEND_INQUIRYFORM_FAILED: 
-      return Object.assign({}, state, { err: action.payload, isPending: false});
+      return Object.assign({}, state, { err: action.payload, isPending: false, isSuccess: false });
     default: 
       return state;
   }

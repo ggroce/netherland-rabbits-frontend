@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { requestInventory } from '../actions';
-import Layout from './Layout';
-import Page1 from '../pages/Page1';
-import Page2 from '../pages/Policies';
-import About from '../pages/About';
-import Home from '../pages/Home';
-import NotFound from '../pages/NotFound';
+import Layout from './Layout.jsx';
+import Page1 from '../pages/Page1.jsx';
+import Policies from '../pages/Policies.jsx';
+import About from '../pages/About.jsx';
+import Home from '../pages/Home.jsx';
+import NotFound from '../pages/NotFound.jsx';
 
 function Routes() {
   const dispatch = useDispatch();

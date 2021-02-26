@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import SidebarItems from './SidebarItems';
+import SidebarItems from './SidebarItems.jsx';
 
 const SidebarItem = styled.div`
 padding: 2px 3px;

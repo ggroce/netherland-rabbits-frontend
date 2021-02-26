@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../Card/Card';
+import Card from '../Card/Card.jsx';
 import Tilt from 'react-parallax-tilt';
 import Fade from 'react-reveal/Fade';
 import './CardList.css';
@@ -15,16 +15,15 @@ const CardList = ({ inventory }) => {
     {
       inventory.map(rabbit => {
         return (
-          <Tilt className="tilt-wrapper"tiltMaxAngleX={6} scale={1.06}>
+          <Tilt key={rabbit.name} className="tilt-wrapper"tiltMaxAngleX={6} scale={1.06}>
             <Fade bottom delay={getRandNum()}>
               <Card 
-              key={rabbit.name}
-              name={rabbit.name}
-              type={rabbit.type}
-              DOB={rabbit.DOB}
-              awards={rabbit.awards}
-              status={rabbit.status}
-              sex={rabbit.sex}
+              rabbitName={rabbit.name}
+              rabbitType={rabbit.type}
+              rabbitDOB={rabbit.DOB}
+              rabbitAwards={rabbit.awards}
+              rabbitStatus={rabbit.status}
+              rabbitSex={rabbit.sex}
               />
             </Fade>
           </Tilt>

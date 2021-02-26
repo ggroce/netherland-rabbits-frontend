@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../components/Header/Header';
-import Sidebar from '../components/Sidebar/Sidebar';
-import Footer from '../components/Footer/Footer';
+import Header from '../components/Header/Header.jsx';
+import Sidebar from '../components/Sidebar/Sidebar.jsx';
+import Footer from '../components/Footer/Footer.jsx';
 
 function Layout(props) {
   return(

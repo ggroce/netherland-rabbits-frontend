@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { requestInventory, sendInquiryForm } from './reducers';
 
 import './index.css';
-import Routes from './containers/Routes';
+import Routes from './containers/Routes.jsx';
 
 import reportWebVitals from './reportWebVitals';
 

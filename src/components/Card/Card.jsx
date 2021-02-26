@@ -56,7 +56,7 @@ const Card = ({ rabbitName, rabbitType, rabbitDOB, rabbitAwards, rabbitStatus, r
               <p><strong>Sex: </strong>{rabbitSex}</p>
             </div>
           <div>
-            <button id="inquire-button" onClick={() => setOpen(true)} style={{marginTop: "1.5rem", marginRight: ".5rem"}}>Click  here to inquire</button>
+            <button id="inquire-button" onClick={() => setOpen(true)} style={{marginTop: "1.2rem", marginRight: ".5rem"}}>Click  here to inquire</button>
           </div>
         </article>
 
@@ -107,7 +107,7 @@ const Card = ({ rabbitName, rabbitType, rabbitDOB, rabbitAwards, rabbitStatus, r
             <label htmlFor="message">
               <strong style={{marginBottom: "0", fontSize: ".85rem"}}>Share a bit about yourself 
                 <br />
-                (area you're from, experience with rabbits):  
+                (area you're from, experience with rabbits, etc):  
                 <br />
               </strong>
               <textarea 
@@ -117,11 +117,15 @@ const Card = ({ rabbitName, rabbitType, rabbitDOB, rabbitAwards, rabbitStatus, r
                 value={custMessage}
                 onChange={e => setCustMessage(e.target.value)} />
             </label>
+            <br />
+            <strong style={{marginBottom: "0", fontSize: ".85rem"}}>
+            Please be sure and read our pet and shipping policy!
+            </strong>
           </p>
+
           <button onClick={(e) => onSendInquiryForm(e)}>Submit</button>
           {/* <input onClick={() => onSendInquiryForm()} type="submit" value="Submit" /> */}
           <br />
-          Please be sure and read our pet and shipping policy!
         </form>
 
 

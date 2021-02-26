@@ -50,7 +50,7 @@ function InquiryForm({ name }) {
             <label htmlFor="message">
               <strong style={{marginBottom: "0", fontSize: ".85rem"}}>Share a bit about yourself 
                 <br />
-                (area you're from, experience with rabbits):  
+                (area you're from, experience with rabbits, etc):  
                 <br />
               </strong>
               <textarea 

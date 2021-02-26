@@ -14,6 +14,12 @@
   background-color: transparent;
   perspective: 1000px;
   z-index: 1;
+  -webkit-touch-callout: none;
+   -webkit-user-select: none;
+    -khtml-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       user-select: none;
 }
 
 .card--flipped .flip-wrapper-inner {
@@ -92,4 +98,19 @@
 button {
   background-color: #4A4737;
   color: #F9F3DB;
+  padding: .2rem;
+}
+
+form button {
+  padding: .5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+input {
+  height: 1.1rem;
+}
+
+textarea {
+  width: 15rem;
 }

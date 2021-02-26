@@ -18,7 +18,12 @@ function Home(props) {
         </div>
         <div id="seeInventory" className="spacer"/>
         <div className="flex_container flex_row flex_center">
-          <CardList inventory={inventory} />
+          {
+            isPending ? 
+            <h2>Loading list of Rabbits!</h2> :
+            (<CardList inventory={inventory} />)
+          }
+          {/* <CardList inventory={inventory} /> */}
         </div>
       </div>
       <div className="spacer" />

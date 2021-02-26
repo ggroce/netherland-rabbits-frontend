@@ -7,7 +7,7 @@ const Splash = () => {
 
   useEffect(() => {
     new Vivus('svg-oldtree', {
-      duration: 300, type:'delayed', start: 'autostart', forceRender: true
+      duration: 375, type:'delayed', start: 'autostart', forceRender: true
     }, function (obj) {
       obj.el.classList.add('finished');
     });

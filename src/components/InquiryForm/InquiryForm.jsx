@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import './InquiryForm.css';
 
 function InquiryForm({ rabbitName, onCloseModal }) {
+  let closeModal = onCloseModal;
 
   let [custName, setCustName] = useState('');
   let [custEmail, setCustEmail] = useState('');
   let [custMessage, setCustMessage] = useState('');
-  let [isPending, setIsPending] = useState(false);
-  let [isSuccess, setIsSuccess] = useState(false);
-  let [isError, setIsError] = useState(false);
+  let [formStatus, setFormStatus] = useState('');
 
   const onSendInquiryForm = (event) => {
+    setFormStatus('');
     if (!custName || !custEmail|| !custMessage) {
       return;
     }
 
     event.preventDefault(); //prevent form submission from reloading entire page
-    document.getElementById('custName').disabled='true';
-    document.getElementById('custEmail').disabled='true';
-    document.getElementById('custMessage').disabled='true';
-    document.getElementById('submitButton').disabled='true';
+    document.getElementById('custName').disabled=true;
+    document.getElementById('custEmail').disabled=true;
+    document.getElementById('custMessage').disabled=true;
+    document.getElementById('submitButton').disabled=true;
 
     sendInquiryForm(custName, custEmail, custMessage, rabbitName);
   }
@@ -27,9 +27,8 @@ function InquiryForm({ rabbitName, onCloseModal }) {
   const sendInquiryForm = (custName, custEmail, custMessage, rabbitName) => {
     (async function () {
       try {
-        setIsPending = true;
+        setFormStatus('pending');
 
-        ReactDOM.render(<ShowPending />, document.querySelector("#submissionResults"));
         const res = await fetch('http://localhost:31775/rabbit-inquiry', {
           method: 'post', 
           headers: {'Content-Type': 'application/json'}, 
@@ -41,34 +40,56 @@ function InquiryForm({ rabbitName, onCloseModal }) {
           })
         });
         const resJson = await res.json();
-        setIsPending = false;
-        setIsSuccess = true;
-        
-        setTimeout(() => {  onCloseModal(); }, 1500);
-        console.log(resJson);
+        //check resJson here?
+        if (closeModal) {
+          console.log('closemodal after success: ', closeModal);
+          setFormStatus('success');
+          setTimeout(() => {if(closeModal){onCloseModal()}}, 5000);
+        }
       } catch(err) {
-        setIsPending = false;
-        setIsError = false;
-        console.log('Rabbit Inquiry error: ', err);
-        document.getElementById('custName').disabled='false';
-        document.getElementById('custEmail').disabled='false';
-        document.getElementById('custMessage').disabled='false';
-        document.getElementById('submitButton').disabled='false';
+        if (closeModal) {
+          console.log('closemodal in catch: ', closeModal);
+          setFormStatus('error');
+          console.log('Rabbit Inquiry error: ', err);
+          document.getElementById('custName').disabled=false;
+          document.getElementById('custEmail').disabled=false;
+          document.getElementById('custMessage').disabled=false;
+          document.getElementById('submitButton').disabled=false;
+        }
       }
     }());
   }
 
-  const ShowPending = () => {
-    return <p>Sending message...</p>
+  const FormStatus = ({status}) => {
+    
+    // useEffect(() => {
+
+    //   return () => {
+    //     closeModal = null;
+    //   }
+    // }, []);
+
+    switch(status) {
+      case 'pending': 
+        return (<h5>Sending message...</h5>);
+      case 'success':
+        return (<h5>Message sent, thank you for your interest!</h5>);
+      case 'error':
+        return (<h5 style={{color: "red"}}>Error sending message, please try again later!</h5>);
+      default: 
+        return '';
+    }
   }
-  
-  const ShowSuccess = () => {
-    return <h5>Message sent, thank you for your interest!</h5>
-  }
-  
-  const ShowError = () => {
-    return <h5 style={{color: "red"}}>Error sending message, please try again later!</h5>
-  }
+
+  useEffect(() => {
+
+    return () => {
+      console.log('closemodal in useeffect before nulling: ', closeModal);
+      closeModal = null;
+      console.log('modal closed');
+      console.log('closemodal is now null hopefully?', closeModal);
+    }
+  }, [formStatus]);
 
   return(
     <>
@@ -120,11 +141,8 @@ function InquiryForm({ rabbitName, onCloseModal }) {
         <br />
 
         <div id="submissionResults">
-
+          <FormStatus status={formStatus} />
         </div>
-        {isPending ? <ShowPending /> : null}
-        {isSuccess ? <ShowSuccess /> : null}
-        {isError ? <ShowError /> : null}
 
         <button id="submitButton" onClick={(e) => onSendInquiryForm(e)}>Submit</button>
       </form>

@@ -1,32 +1,73 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { sendInquiryForm } from '../../actions'
 import './InquiryForm.css';
 
 function InquiryForm({ rabbitName, onCloseModal }) {
-  // const [open, setOpen] = useState(false);
 
-  const [custName, setCustName] = useState('');
-  const [custEmail, setCustEmail] = useState('');
-  const [custMessage, setCustMessage] = useState('');
+  let [custName, setCustName] = useState('');
+  let [custEmail, setCustEmail] = useState('');
+  let [custMessage, setCustMessage] = useState('');
+  let [isPending, setIsPending] = useState(false);
+  let [isSuccess, setIsSuccess] = useState(false);
+  let [isError, setIsError] = useState(false);
 
-  const { isPending, isSuccess, err } = useSelector((state) => state.sendInquiryForm);
-
-  const dispatch = useDispatch();
-  const onSendInquiryForm = (e) => {
+  const onSendInquiryForm = (event) => {
     if (!custName || !custEmail|| !custMessage) {
       return;
     }
 
-//     lock input / post msg about sending msg.
-//     post msg when msg sent.
-//     wait a tick.
-//    close modal.
-//    use async await maybe?  watch isPending, success.  
+    event.preventDefault(); //prevent form submission from reloading entire page
+    document.getElementById('custName').disabled='true';
+    document.getElementById('custEmail').disabled='true';
+    document.getElementById('custMessage').disabled='true';
+    document.getElementById('submitButton').disabled='true';
 
-    e.preventDefault();
-    dispatch(sendInquiryForm(custName, custEmail, custMessage, rabbitName));
-    onCloseModal();
+    sendInquiryForm(custName, custEmail, custMessage, rabbitName);
+  }
+
+  const sendInquiryForm = (custName, custEmail, custMessage, rabbitName) => {
+    (async function () {
+      try {
+        setIsPending = true;
+
+        ReactDOM.render(<ShowPending />, document.querySelector("#submissionResults"));
+        const res = await fetch('http://localhost:31775/rabbit-inquiry', {
+          method: 'post', 
+          headers: {'Content-Type': 'application/json'}, 
+          body: JSON.stringify({
+            custName: custName, 
+            custEmail: custEmail, 
+            custMessage: custMessage, 
+            rabbitName: rabbitName, 
+          })
+        });
+        const resJson = await res.json();
+        setIsPending = false;
+        setIsSuccess = true;
+        
+        setTimeout(() => {  onCloseModal(); }, 1500);
+        console.log(resJson);
+      } catch(err) {
+        setIsPending = false;
+        setIsError = false;
+        console.log('Rabbit Inquiry error: ', err);
+        document.getElementById('custName').disabled='false';
+        document.getElementById('custEmail').disabled='false';
+        document.getElementById('custMessage').disabled='false';
+        document.getElementById('submitButton').disabled='false';
+      }
+    }());
+  }
+
+  const ShowPending = () => {
+    return <p>Sending message...</p>
+  }
+  
+  const ShowSuccess = () => {
+    return <h5>Message sent, thank you for your interest!</h5>
+  }
+  
+  const ShowError = () => {
+    return <h5 style={{color: "red"}}>Error sending message, please try again later!</h5>
   }
 
   return(
@@ -39,7 +80,7 @@ function InquiryForm({ rabbitName, onCloseModal }) {
           Name: <br />
           <input 
             type="text" 
-            id="name" 
+            id="custName" 
             value={custName}
             onChange={e => setCustName(e.target.value)} 
             required/>
@@ -50,7 +91,7 @@ function InquiryForm({ rabbitName, onCloseModal }) {
           Email address: <br /> 
           <input 
             type="email" 
-            id="email" 
+            id="custEmail" 
             value={custEmail}
             onChange={e => setCustEmail(e.target.value)} 
             required/>
@@ -67,7 +108,7 @@ function InquiryForm({ rabbitName, onCloseModal }) {
           <textarea 
             type="text" 
             rows="5" 
-            id="message" 
+            id="custMessage" 
             value={custMessage}
             onChange={e => setCustMessage(e.target.value)} 
             required/>
@@ -78,8 +119,14 @@ function InquiryForm({ rabbitName, onCloseModal }) {
         </strong>
         <br />
 
-        <button onClick={(e) => onSendInquiryForm(e)}>Submit</button>
-          
+        <div id="submissionResults">
+
+        </div>
+        {isPending ? <ShowPending /> : null}
+        {isSuccess ? <ShowSuccess /> : null}
+        {isError ? <ShowError /> : null}
+
+        <button id="submitButton" onClick={(e) => onSendInquiryForm(e)}>Submit</button>
       </form>
     </>
   );

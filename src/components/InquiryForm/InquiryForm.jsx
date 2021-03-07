@@ -42,19 +42,27 @@ function InquiryForm({ rabbitName, onCloseModal }) {
         const resJson = await res.json();
         //check resJson here?
         if (closeModal) {
-          console.log('closemodal after success: ', closeModal);
-          setFormStatus('success');
-          setTimeout(() => {if(closeModal){onCloseModal()}}, 5000);
+          try {
+            console.log('closemodal after success: ', closeModal);
+            setFormStatus('success');
+            setTimeout(() => {if(closeModal){onCloseModal()}}, 5000);
+          } catch(err) {
+            console.log(err);
+          }
         }
       } catch(err) {
         if (closeModal) {
-          console.log('closemodal in catch: ', closeModal);
-          setFormStatus('error');
-          console.log('Rabbit Inquiry error: ', err);
-          document.getElementById('custName').disabled=false;
-          document.getElementById('custEmail').disabled=false;
-          document.getElementById('custMessage').disabled=false;
-          document.getElementById('submitButton').disabled=false;
+          try {
+            console.log('closemodal in catch: ', closeModal);
+            setFormStatus('error');
+            console.log('Rabbit Inquiry error: ', err);
+            document.getElementById('custName').disabled=false;
+            document.getElementById('custEmail').disabled=false;
+            document.getElementById('custMessage').disabled=false;
+            document.getElementById('submitButton').disabled=false;
+          } catch(err) {
+            console.log(err);
+          }
         }
       }
     }());

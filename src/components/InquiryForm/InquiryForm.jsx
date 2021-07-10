@@ -2,12 +2,13 @@ import React, { useEffect, useLayoutEffect, useState } from 'react';
 import './InquiryForm.css';
 
 function InquiryForm({ rabbitName, onCloseModal }) {
-  let closeModal = onCloseModal;
+  console.log('on openmodal, onCloseModal is:', onCloseModal);
 
-  let [custName, setCustName] = useState('');
-  let [custEmail, setCustEmail] = useState('');
-  let [custMessage, setCustMessage] = useState('');
-  let [formStatus, setFormStatus] = useState('');
+  const [custName, setCustName] = useState('');
+  const [custEmail, setCustEmail] = useState('');
+  const [custMessage, setCustMessage] = useState('');
+  const [formStatus, setFormStatus] = useState('');
+  const [closeModal, setCloseModal] = useState({onCloseModal});
 
   const onSendInquiryForm = (event) => {
     setFormStatus('');
@@ -25,7 +26,7 @@ function InquiryForm({ rabbitName, onCloseModal }) {
   }
 
   const sendInquiryForm = (custName, custEmail, custMessage, rabbitName) => {
-    (async function () {
+    (async function() {
       try {
         setFormStatus('pending');
 
@@ -45,7 +46,7 @@ function InquiryForm({ rabbitName, onCloseModal }) {
           try {
             console.log('closemodal after success: ', closeModal);
             setFormStatus('success');
-            setTimeout(() => {if(closeModal){onCloseModal()}}, 5000);
+            setTimeout(() => {if(closeModal){onCloseModal()}}, 3000);
           } catch(err) {
             console.log(err);
           }
@@ -69,13 +70,6 @@ function InquiryForm({ rabbitName, onCloseModal }) {
   }
 
   const FormStatus = ({status}) => {
-    
-    // useEffect(() => {
-
-    //   return () => {
-    //     closeModal = null;
-    //   }
-    // }, []);
 
     switch(status) {
       case 'pending': 
@@ -93,9 +87,8 @@ function InquiryForm({ rabbitName, onCloseModal }) {
 
     return () => {
       console.log('closemodal in useeffect before nulling: ', closeModal);
-      closeModal = null;
-      console.log('modal closed');
-      console.log('closemodal is now null hopefully?', closeModal);
+      console.log(setCloseModal());
+      console.log('closemodal has been set and is now null hopefully?', closeModal);
     }
   }, [formStatus]);
 

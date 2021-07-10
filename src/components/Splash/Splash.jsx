@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Vivus from 'vivus';
 import Fade from 'react-reveal/Fade';
 import './Splash.css';
-// import fullTree from './fullTree.svg';
 
 const Splash = () => {
 
@@ -58,5 +57,3 @@ const Splash = () => {
 }
 
 export default Splash;
-
-

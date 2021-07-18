@@ -58,7 +58,6 @@
 }
 
 .card-front-img {
-  display: inline-block;
   position: absolute;
   left: 0; 
   right: 0; 
@@ -66,6 +65,7 @@
   margin-right: auto; 
   height: 4.5rem;
   width: 10rem;
+  object-fit: cover;
   border-radius: 100%;
   border-style: solid; 
   border-width: 1px;

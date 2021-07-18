@@ -6,16 +6,16 @@ import Footer from '../components/Footer/Footer.jsx';
 function Layout(props) {
   return(
     <div id="parent">
-      <Header />
+      <Header history={props.history}/>
       <Sidebar history={props.history}/>
       <main>
-      <div className="header-hidden-spacer" />
-      <div className="scroll-wrapper">
-        <div>
-          {props.children}
-        </div>
+        <div className="header-hidden-spacer" />
+        <div className="scroll-wrapper">
+          <div>
+            {props.children}
+          </div>
           <Footer />
-      </div>
+        </div>
       </main>
     </div>
   )

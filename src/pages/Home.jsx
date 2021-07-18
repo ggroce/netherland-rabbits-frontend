@@ -7,7 +7,7 @@ function Home(props) {
   const { isPending, inventory, err } = useSelector((state) => state.requestInventory);
   
   const handleLinkClick = () => {
-    document.getElementById("seeInventory").scrollIntoView({ behavior: "smooth" });
+    document.getElementById("intro").scrollIntoView({ behavior: "smooth" });
   };
 
   return(
@@ -16,7 +16,23 @@ function Home(props) {
         <div onClick={handleLinkClick}>
           <Splash />
         </div>
-        <div id="seeInventory" className="spacer"/>
+        <div id="intro" className="spacer" />
+        <div  className="div-info stitching drop-shadow">
+          <div style={{textAlign: 'center', fontWeight: 'bold', marginTop: '1em'}}>
+            Welcome to La Belle Rabbitry!
+          </div> 
+          <br />
+          <div style={{textIndent: '1em'}}>
+            We are a Texas Gulf Coast based rabbitry, focused in the 
+            breeding and competitive showing of Netherland Dwarf rabbits.  
+            La Belle Rabbitry currently has many award winning rabbits on hand, 
+            including  many Grand Champions and rabbits with multiple legs.  The 
+            shipping of rabbits will be considered on a case by case basis, with 
+            factors such as distance and experience of the buyer taken into account.  
+            Please click on the cards below to explore and learn more about our rabbits.  
+          </div>
+        </div>
+        <div id="rabbitList" className="spacer"/>
         <div className="flex_container flex_row flex_center">
           {
             isPending ? 

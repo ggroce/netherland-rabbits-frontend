@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ballet&family=Benne&display=swap');
 
 :root {
-  font-size: calc(1em + 1vw);
+  font-size: calc(1em + .5vw);
   --header-height: 3em;
   --header-border-width: 2px;
   --footer-height: 5em;
@@ -114,15 +114,17 @@ header li {
 }
 
 #sidebar-logo-large {
-  height: 4em; 
+  height: 4.5em; 
   margin-top: var(--content-spacer);
   font-family: 'Ballet', cursive;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   transition: all 3s ease;
+  text-align: center;
 }
 
 #sidebar-logo-small {
-  height: 3.125em; 
+  height: 4em; 
+  margin: 0 auto;
   margin-top: var(--content-spacer);
   font-family: 'Ballet', cursive;
   transition: all 2s ease;
@@ -187,6 +189,8 @@ header li {
   border-radius: 5px;
   border-color: #000000;
   background-color: #F9F3DB;
+  max-width: 60em;
+  margin: 1rem;
 }
 
 .drop-shadow {
@@ -228,7 +232,7 @@ header li {
   :root {
     --header-height: 2rem;
     --content-spacer: .5rem;
-    --sidebar-width: 4.5rem;
+    --sidebar-width: 5rem;
   }
   header {
     margin-left: var(--sidebar-width);
@@ -242,9 +246,11 @@ header li {
   }
   .sidebar {
     display: block;
+    overflow: hidden;
   }
   #sidebar-tablet {
     display: block;
+    font-size: 1em;
   }
   main {
     margin-left: var(--sidebar-width);

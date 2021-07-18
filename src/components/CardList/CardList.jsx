@@ -18,6 +18,7 @@ const CardList = ({ inventory }) => {
           <Tilt key={rabbit.name} className="tilt-wrapper"tiltMaxAngleX={6} scale={1.06}>
             <Fade bottom delay={getRandNum()}>
               <Card 
+              rabbitry={rabbit.rabbitry}
               rabbitName={rabbit.name}
               rabbitType={rabbit.type}
               rabbitDOB={rabbit.DOB}

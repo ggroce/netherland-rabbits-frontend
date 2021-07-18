@@ -7,7 +7,7 @@ function About(props) {
     <>
     <Fade>
       <div className="spacer" />
-      <div className="div-info stitching drop-shadow ">
+      <div className="div-info stitching drop-shadow">
         <p>Information about Labelle Rabbitry.</p>
       </div>
     </Fade>

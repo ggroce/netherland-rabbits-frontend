@@ -1,7 +1,7 @@
 import { REQUEST_INVENTORY_PENDING, REQUEST_INVENTORY_SUCCESS, 
   REQUEST_INVENTORY_FAILED, SEND_INQUIRYFORM_PENDING, 
   SEND_INQUIRYFORM_SUCCESS, SEND_INQUIRYFORM_FAILED } from './constants';
-const DOMAINURL = 'https://netherlandbunnies.com';
+const DOMAIN_URL = 'https://netherlandbunnies.com';
 
 export const requestInventory = () => (dispatch) => {
   dispatch({ type: REQUEST_INVENTORY_PENDING });

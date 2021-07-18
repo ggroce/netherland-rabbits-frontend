@@ -5,7 +5,7 @@ function Footer(props) {
   return(
     <footer>
       <nav>
-        Footer goes here.
+        Copyright 2021 La Belle Rabbitry.
       </nav>
     </footer>
   );

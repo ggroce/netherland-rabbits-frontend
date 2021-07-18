@@ -1,11 +1,14 @@
 import React from 'react';
 import './Footer.css';
 
+const copyRightText = 
+`Copyright 2021 La Belle Rabbitry.`;
+
 function Footer(props) {
   return(
     <footer>
-      <nav>
-        Copyright 2021 La Belle Rabbitry.
+      <nav className="flex_container flex_column flex_center">
+        {copyRightText}
       </nav>
     </footer>
   );

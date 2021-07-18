@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { requestInventory } from '../actions';
 import Layout from './Layout.jsx';
-import Page1 from '../pages/Page1.jsx';
+import Contract from '../pages/Contract.jsx';
 import Policies from '../pages/Policies.jsx';
 import About from '../pages/About.jsx';
 import Home from '../pages/Home.jsx';
@@ -12,13 +12,13 @@ import NotFound from '../pages/NotFound.jsx';
 function Routes() {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    onRequestInventory();
-  }, []);
-
   const onRequestInventory = () => {
     dispatch(requestInventory());
   }
+
+  useEffect(() => {
+    onRequestInventory();
+  }, []);
 
   return(
     <BrowserRouter>
@@ -27,7 +27,7 @@ function Routes() {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/home" exact component={Home} />
-            <Route path="/page1" component={Page1} />
+            <Route path="/contract" component={Contract} />
             <Route path="/policies" component={Policies} />
             <Route path="/about" component={About} />
             <Route component={NotFound} />

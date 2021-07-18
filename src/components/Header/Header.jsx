@@ -20,6 +20,14 @@ const outBoundLinks = {
   },
 }
 
+const outBoundLinkCorner = {
+  link1: {
+    displayName: 'LBR on Facebook',
+    url: 'https://www.facebook.com/La-Belle-Rabbitry-166542050861453',
+    title: 'La Belle Rabbitry on Facebook'
+  }
+}
+
 function Header(props) {
   return(
     <header className="drop-shadow">
@@ -41,11 +49,11 @@ function Header(props) {
               })
             }
             <li className="push_right">
-              <a href="https://www.facebook.com/La-Belle-Rabbitry-166542050861453" 
-                title="La Belle Rabbitry on Facebook"
+              <a href={outBoundLinkCorner.link1.url} 
+                title={outBoundLinkCorner.link1.title}
                 target="_blank"
                 rel="noreferrer">
-                  LBR on Facebook
+                  {outBoundLinkCorner.link1.displayName}
               </a>
             </li>
           </ul>

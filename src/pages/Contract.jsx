@@ -1,6 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-function Page1(props) {
+function Contract(props) {
 
   return(
     <>
@@ -48,4 +48,4 @@ function Page1(props) {
   );
 }
 
-export default Page1;
+export default Contract;

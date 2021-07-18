@@ -3,6 +3,18 @@ import { useSelector } from 'react-redux';
 import Splash from '../components/Splash/Splash';
 import CardList from '../components/CardList/CardList';
 
+const pageText = {
+  welcomeHeader: 
+  `Welcome to La Belle Rabbitry!`, 
+  introText: 
+  `We are a Texas Gulf Coast based rabbitry, focused in the breeding and competitive 
+  showing of Netherland Dwarf rabbits. La Belle Rabbitry currently has many award 
+  winning rabbits on hand, including many Grand Champions and rabbits with multiple 
+  legs. The shipping of rabbits will be considered on a case by case basis, with 
+  factors such as distance and experience of the buyer taken into account. Please 
+  click on the cards below to explore and learn more about our rabbits.`
+}
+
 function Home(props) {
   const { isPending, inventory, err } = useSelector((state) => state.requestInventory);
   
@@ -19,17 +31,11 @@ function Home(props) {
         <div id="intro" className="spacer" />
         <div  className="div-info stitching drop-shadow">
           <div style={{textAlign: 'center', fontWeight: 'bold', marginTop: '1em'}}>
-            Welcome to La Belle Rabbitry!
+            {pageText.welcomeHeader}
           </div> 
           <br />
           <div style={{textIndent: '1em'}}>
-            We are a Texas Gulf Coast based rabbitry, focused in the 
-            breeding and competitive showing of Netherland Dwarf rabbits.  
-            La Belle Rabbitry currently has many award winning rabbits on hand, 
-            including  many Grand Champions and rabbits with multiple legs.  The 
-            shipping of rabbits will be considered on a case by case basis, with 
-            factors such as distance and experience of the buyer taken into account.  
-            Please click on the cards below to explore and learn more about our rabbits.  
+            {pageText.introText}  
           </div>
         </div>
         <div id="rabbitList" className="spacer"/>
@@ -37,9 +43,8 @@ function Home(props) {
           {
             isPending ? 
             <h2>Loading list of Rabbits!</h2> :
-            (<CardList inventory={inventory} />)
+            <CardList inventory={inventory} />
           }
-          {/* <CardList inventory={inventory} /> */}
         </div>
       </div>
       <div className="spacer" />

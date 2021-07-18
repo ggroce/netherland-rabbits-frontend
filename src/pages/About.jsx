@@ -1,6 +1,8 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 
+const aboutText = `Information about Labelle Rabbitry.`;
+
 function About(props) {
 
   return(
@@ -8,7 +10,7 @@ function About(props) {
     <Fade>
       <div className="spacer" />
       <div className="div-info stitching drop-shadow">
-        <p>Information about Labelle Rabbitry.</p>
+        <p>{aboutText}</p>
       </div>
     </Fade>
     </>

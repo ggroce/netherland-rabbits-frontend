@@ -113,6 +113,15 @@ header li {
   display: none;
 }
 
+#sidebar-logo-large-wrapper {
+  background-color: #4A4737; 
+  width: 7rem; 
+  height: 7rem; 
+  margin-top: .5rem; 
+  border-radius: 5px; 
+  color: #F9F3DB;
+}
+
 #sidebar-logo-large {
   height: 4.5em; 
   margin-top: var(--content-spacer);
@@ -122,12 +131,20 @@ header li {
   text-align: center;
 }
 
+#sidebar-logo-small-wrapper {
+  background-color: #4A4737; 
+  width: 105%; 
+  margin-left: -2px;
+  border-radius: 5px; 
+  color: #F9F3DB;
+}
+
 #sidebar-logo-small {
   height: 4em; 
-  margin: 0 auto;
   margin-top: var(--content-spacer);
   font-family: 'Ballet', cursive;
   transition: all 2s ease;
+  text-align: center;
 }
 
 .child_container {
@@ -203,6 +220,11 @@ header li {
   outline-offset: -7px;
 }
 
+.stitching-inverse {
+  outline: 1px dashed #F9F3DB;
+  outline-offset: -7px;
+}
+
 @keyframes fadeIn {
   0% {
       opacity: 0;
@@ -232,7 +254,7 @@ header li {
   :root {
     --header-height: 2rem;
     --content-spacer: .5rem;
-    --sidebar-width: 5rem;
+    --sidebar-width: 5.5rem;
   }
   header {
     margin-left: var(--sidebar-width);

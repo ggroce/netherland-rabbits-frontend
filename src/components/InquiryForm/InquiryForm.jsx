@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './InquiryForm.css';
+import DOMAIN_API_URL from '../../constants.js';
 
 function InquiryForm({ rabbitName, onCloseModal }) {
   console.log('on openmodal, onCloseModal is:', onCloseModal);
@@ -30,7 +31,7 @@ function InquiryForm({ rabbitName, onCloseModal }) {
       try {
         setFormStatus('pending');
 
-        const res = await fetch('http://localhost:31775/rabbit-inquiry', {
+        const res = await fetch(DOMAIN_API_URL, {
           method: 'post', 
           headers: {'Content-Type': 'application/json'}, 
           body: JSON.stringify({

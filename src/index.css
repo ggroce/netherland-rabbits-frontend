@@ -4,7 +4,7 @@
   font-size: calc(1em + .5vw);
   --header-height: 3em;
   --header-border-width: 2px;
-  --footer-height: 5em;
+  --footer-height: 7em;
   --content-spacer: 1em;
   --sidebar-width: 0;
 }
@@ -52,7 +52,7 @@ main {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   height: var(--header-height);
   width: 100%;
@@ -145,6 +145,18 @@ header li {
   font-family: 'Ballet', cursive;
   transition: all 2s ease;
   text-align: center;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  height: var(--footer-height);
+  width: 100%;
+  margin-left: 0px;
+  padding-left: var(--content-spacer);
+  background-color: #4A4737;
+  color: #F9F3DB;
+  overflow: hidden;
 }
 
 .child_container {
@@ -284,6 +296,9 @@ header li {
   .child_container {
     min-height: 4.5em;
   }
+  footer {
+    height: calc(var(--footer-height) - 2em);
+  }
 }
 
 @media screen and (min-width: 64em) {
@@ -296,5 +311,8 @@ header li {
   }
   #sidebar-desktop {
     display: block;
+  }
+  footer {
+    height: calc(var(--footer-height) - 3em);
   }
 }

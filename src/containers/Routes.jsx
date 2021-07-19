@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { requestInventory } from '../actions';
 import Layout from './Layout.jsx';
-import Contract from '../pages/Contract.jsx';
 import Policies from '../pages/Policies.jsx';
 import About from '../pages/About.jsx';
 import Home from '../pages/Home.jsx';
@@ -27,7 +26,6 @@ function Routes() {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/home" exact component={Home} />
-            <Route path="/contract" component={Contract} />
             <Route path="/policies" component={Policies} />
             <Route path="/about" component={About} />
             <Route component={NotFound} />

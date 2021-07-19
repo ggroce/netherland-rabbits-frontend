@@ -42,12 +42,10 @@ const Card = ({ rabbitry, rabbitName, rabbitType, rabbitDOB,
               <p><strong>Status: </strong>{rabbitStatus}</p>
               <p><strong>Sex: </strong>{rabbitSex}</p>
             </div>
-          <div>
             <button id="inquire-button" onClick={() => setOpen(true)} 
-              style={{marginTop: "1.2rem", marginRight: ".5rem"}}>
+              style={{position: 'absolute', bottom: '.5rem', marginRight: '.5rem'}}>
                 Click here to inquire
             </button>
-          </div>
         </article>
 
         <article className="card-back stitching">

@@ -10,11 +10,7 @@ const NavbarItems = [
   {
     name: 'About', 
     route: '/about', 
-  },
-  {
-    name: 'Contract', 
-    route: '/contract', 
-  },
+  }
 ];
 
 export default NavbarItems;

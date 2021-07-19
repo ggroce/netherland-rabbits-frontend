@@ -1,14 +1,14 @@
 import { REQUEST_INVENTORY_PENDING, REQUEST_INVENTORY_SUCCESS, 
   REQUEST_INVENTORY_FAILED, SEND_INQUIRYFORM_PENDING, 
   SEND_INQUIRYFORM_SUCCESS, SEND_INQUIRYFORM_FAILED } from './constants';
-  import DOMAIN_API_URL from './constants.js';
+import { DOMAIN_API_URL } from './constants';
 
 export const requestInventory = () => (dispatch) => {
   dispatch({ type: REQUEST_INVENTORY_PENDING });
 
   (async function () {
     try {
-      const res = await fetch(DOMAIN_API_URL);
+      const res = await fetch(`${DOMAIN_API_URL}/inventory`);
       const resJson = await res.json();
       dispatch({ 
         type: REQUEST_INVENTORY_SUCCESS, 
@@ -29,7 +29,7 @@ export const sendInquiryForm = (custName, custEmail, custMessage, rabbitName) =>
 
   (async function () {
     try {
-      const res = await fetch(DOMAIN_API_URL, {
+      const res = await fetch(`${DOMAIN_API_URL}/rabbit-inquiry`, {
         method: 'post', 
         headers: {'Content-Type': 'application/json'}, 
         body: JSON.stringify({

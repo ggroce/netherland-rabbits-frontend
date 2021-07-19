@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './InquiryForm.css';
-import DOMAIN_API_URL from '../../constants.js';
+import { DOMAIN_API_URL } from '../../constants.js';
 
 function InquiryForm({ rabbitName, onCloseModal }) {
   console.log('on openmodal, onCloseModal is:', onCloseModal);

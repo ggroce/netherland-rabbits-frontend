@@ -13,7 +13,7 @@
   cursor: pointer;
   background-color: transparent;
   perspective: 1000px;
-  z-index: 1;
+  z-index: 10;
   -webkit-touch-callout: none;
    -webkit-user-select: none;
     -khtml-user-select: none;
@@ -55,9 +55,21 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; */
   box-shadow: 4px 7px 10px 0px rgba( 0, 0, 0, .3 );
+  z-index: 5;
 }
 
-.card-front-img {
+.card-back-inset {
+  margin: 0; 
+  padding: 0; 
+  height: 100%; 
+  width: 100%; 
+  background-color: #F9F3DB;
+  margin-top: -1rem;
+  z-index: 9;
+}
+
+
+.card-img-avatar {
   position: absolute;
   left: 0; 
   right: 0; 
@@ -70,7 +82,25 @@
   border-style: solid; 
   border-width: 1px;
   margin-top: -2rem;
+  z-index: 2;
 } 
+
+.card-img-avatar-cover {
+  background-color: #4A4737;
+  z-index: -1;
+  color:#F9F3DB;
+  border-color: black;
+} 
+
+.card-large-img {
+  margin-top: .5rem;
+  height: 8rem;
+  width: 8rem;
+  object-fit: cover;
+  border-style: solid; 
+  border-width: 1px;
+  z-index: 2;
+}
 
 .card-front-details {
   margin-top: 3.5rem;
@@ -98,6 +128,10 @@
 
 .card-back {
   transform: rotateY(180deg);
+}
+
+.space-name {
+  margin-top: .5rem;
 }
 
 button {

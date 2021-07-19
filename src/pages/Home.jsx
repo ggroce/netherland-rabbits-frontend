@@ -30,11 +30,10 @@ function Home(props) {
         </div>
         <div id="intro" className="spacer" />
         <div  className="div-info stitching drop-shadow">
-          <div style={{textAlign: 'center', fontWeight: 'bold', marginTop: '1em'}}>
+          <div style={{textAlign: 'center', fontWeight: 'bold', marginTop: '.5em'}}>
             {pageText.welcomeHeader}
           </div> 
-          <br />
-          <div style={{textIndent: '1em'}}>
+          <div style={{textIndent: '1em', marginTop: '.5em'}}>
             {pageText.introText}  
           </div>
         </div>

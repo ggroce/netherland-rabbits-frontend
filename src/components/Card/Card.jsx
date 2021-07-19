@@ -11,7 +11,8 @@ const Card = ({ rabbitry, rabbitName, rabbitType, rabbitDOB,
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
 
-  const imageFileName = `/images/${rabbitry}_${rabbitName}_01.jpg`;
+  const imageSmall = `/images_small/${rabbitry}_${rabbitName}_01.jpg`;
+  const imageLarge = `/images_large/${rabbitry}_${rabbitName}_01.jpg`;
 
   const rotateCard = (e) => {
     if (e.target.id !== 'inquire-button') {
@@ -25,10 +26,12 @@ const Card = ({ rabbitry, rabbitName, rabbitType, rabbitDOB,
       <div className="flip-wrapper-inner">
 
         <article className="card-front stitching">
-            <img className="card-front-img" 
-              src={imageFileName} 
+            <img className="card-img-avatar" 
+              src={imageSmall} 
               alt={rabbitName}
-              loading="lazy" title="Photo of a rabbit" />
+              loading="lazy" 
+              title="Photo of a rabbit" 
+            />
             
             <div className="card-front-details">
               <h2>{rabbitName}</h2>
@@ -47,13 +50,25 @@ const Card = ({ rabbitry, rabbitName, rabbitType, rabbitDOB,
         </article>
 
         <article className="card-back stitching">
-          <div className="card-back-details">
-            <h2>{rabbitName}</h2>
-            <hr />
-            <p>We can put even more information on the back of the card here.  </p>
+          <div className="card-back-inset">
+            <div className="card-back-details">
+              <div className="card-img-avatar card-img-avatar-cover">
+                <div className="space-name">
+                  {rabbitName}
+                </div>
+              </div>
+              <img
+                className="card-large-img"
+                height="200"
+                src={imageLarge} 
+                alt={rabbitName}
+                loading="lazy" 
+                title="Large photo of a rabbit" 
+              />
+            </div>
           </div>
         </article>
-    
+        
       </div>
     </div>
 

@@ -44,7 +44,8 @@ const Card = ({ rabbitry, rabbitName, rabbitType, rabbitDOB,
             </div>
           <div>
             <button id="inquire-button" onClick={() => setOpen(true)} 
-              style={{marginTop: "1.2rem", marginRight: ".5rem"}}>Click  here to inquire
+              style={{marginTop: "1.2rem", marginRight: ".5rem"}}>
+                Click here to inquire
             </button>
           </div>
         </article>
@@ -53,7 +54,7 @@ const Card = ({ rabbitry, rabbitName, rabbitType, rabbitDOB,
           <div className="card-back-inset">
             <div className="card-back-details">
               <div className="card-img-avatar card-img-avatar-cover">
-                <div className="space-name">
+                <div className="card-name-back">
                   {rabbitName}
                 </div>
               </div>
@@ -68,7 +69,7 @@ const Card = ({ rabbitry, rabbitName, rabbitType, rabbitDOB,
             </div>
           </div>
         </article>
-        
+
       </div>
     </div>
 

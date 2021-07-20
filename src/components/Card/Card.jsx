@@ -42,8 +42,7 @@ const Card = ({ rabbitry, rabbitName, rabbitType, rabbitDOB,
               <p><strong>Status: </strong>{rabbitStatus}</p>
               <p><strong>Sex: </strong>{rabbitSex}</p>
             </div>
-            <button id="inquire-button" onClick={() => setOpen(true)} 
-              style={{position: 'absolute', bottom: '.5rem', marginRight: '.5rem'}}>
+            <button id="inquire-button" className="snap-to-bottom" onClick={() => setOpen(true)}>
                 Click here to inquire
             </button>
         </article>
@@ -57,7 +56,7 @@ const Card = ({ rabbitry, rabbitName, rabbitType, rabbitDOB,
                 </div>
               </div>
               <img
-                className="card-large-img"
+                className="card-large-img snap-to-bottom"
                 height="200"
                 src={imageLarge} 
                 alt={rabbitName}

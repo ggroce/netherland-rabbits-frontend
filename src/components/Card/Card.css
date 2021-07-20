@@ -139,4 +139,10 @@ button {
   background-color: #4A4737;
   color: #F9F3DB;
   padding: .2rem;
+  margin-right: .5rem;
+}
+
+.snap-to-bottom {
+  position: absolute;
+  bottom: .5rem; 
 }

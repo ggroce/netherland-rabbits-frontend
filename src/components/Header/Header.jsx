@@ -37,7 +37,7 @@ function Header(props) {
             {
               Object.keys(outBoundLinks).map(key => {
                 return (
-                  <li>
+                  <li key={key}>
                     <a href={outBoundLinks[key].url} 
                       title={outBoundLinks[key].title}
                       target="_blank"

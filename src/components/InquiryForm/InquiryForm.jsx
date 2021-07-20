@@ -3,7 +3,6 @@ import './InquiryForm.css';
 import { DOMAIN_API_URL } from '../../constants.js';
 
 function InquiryForm({ rabbitName, onCloseModal }) {
-  console.log('on openmodal, onCloseModal is:', onCloseModal);
 
   const [custName, setCustName] = useState('');
   const [custEmail, setCustEmail] = useState('');
@@ -31,7 +30,7 @@ function InquiryForm({ rabbitName, onCloseModal }) {
       try {
         setFormStatus('pending');
 
-        const res = await fetch(DOMAIN_API_URL, {
+        const res = await fetch(`${DOMAIN_API_URL}/rabbit-inquiry`, {
           method: 'post', 
           headers: {'Content-Type': 'application/json'}, 
           body: JSON.stringify({
@@ -87,9 +86,7 @@ function InquiryForm({ rabbitName, onCloseModal }) {
   useEffect(() => {
 
     return () => {
-      console.log('closemodal in useeffect before nulling: ', closeModal);
-      console.log(setCloseModal());
-      console.log('closemodal has been set and is now null hopefully?', closeModal);
+      setCloseModal();
     }
   }, [formStatus]);
 

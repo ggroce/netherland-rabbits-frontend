@@ -60,7 +60,7 @@ function Policies(props) {
   return(
     <>
     <Fade>
-      <div className="spacer" />
+      <div id="top" className="spacer" />
       <div className="div-info stitching drop-shadow">
         <h3>{policiesHeader}</h3>
         {

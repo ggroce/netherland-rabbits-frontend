@@ -24,7 +24,7 @@ function Home(props) {
 
   return(
     <>
-      <div className="flex_container flex_column flex_center">
+      <div id="top" className="flex_container flex_column flex_center">
         <div onClick={handleLinkClick}>
           <Splash />
         </div>

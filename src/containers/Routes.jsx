@@ -7,6 +7,7 @@ import Policies from '../pages/Policies.jsx';
 import About from '../pages/About.jsx';
 import Home from '../pages/Home.jsx';
 import NotFound from '../pages/NotFound.jsx';
+import ScrollToTop from '../components/ScrollToTop/ScrollToTop.js';
 
 function Routes() {
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ function Routes() {
     <BrowserRouter>
       <Route render={(props) => (
         <Layout {...props}>
+          <ScrollToTop />
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/home" exact component={Home} />

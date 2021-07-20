@@ -65,7 +65,7 @@ function About(props) {
   return(
     <>
     <Fade>
-      <div className="spacer" />
+      <div id="top" className="spacer" />
       <div className="div-info stitching drop-shadow">
         <h3>{aboutText.header}</h3>
         <p>{aboutText.details01}</p>

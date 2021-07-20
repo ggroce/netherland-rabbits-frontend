@@ -141,6 +141,10 @@ button {
   background-color: #4A4737;
   color: #F9F3DB;
   padding: .2rem;
+
+}
+
+.card-button {
   margin-right: .5rem;
   position: absolute;
   bottom: .5rem; 

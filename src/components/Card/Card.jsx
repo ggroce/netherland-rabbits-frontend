@@ -42,7 +42,7 @@ const Card = ({ rabbitry, rabbitName, rabbitType, rabbitDOB,
               <p><strong>Status: </strong>{rabbitStatus}</p>
               <p><strong>Sex: </strong>{rabbitSex}</p>
             </div>
-            <button id="inquire-button" onClick={() => setOpen(true)}>
+            <button id="inquire-button" className="card-button" onClick={() => setOpen(true)}>
                 Click here to inquire
             </button>
         </article>

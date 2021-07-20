@@ -35,7 +35,7 @@ const outBoundLinks = {
   },
   link2: {
     displayName: 'American Rabbit Breeders Association', 
-    url: 'https://www.arba.org',
+    url: 'https://www.arba.net',
     title: 'American Rabbit Breeders Association'
   },
   link3: { 

@@ -47,6 +47,7 @@ function Home(props) {
         </div>
       </div>
       <div className="spacer" />
+      <div className="spacer" />
     </>
   );
 }

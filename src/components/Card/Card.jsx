@@ -5,7 +5,7 @@ import './Card.css';
 import InquiryForm from '../InquiryForm/InquiryForm.jsx';
 
 const Card = ({ rabbitry, rabbitName, rabbitType, rabbitDOB, 
-    rabbitAwards, rabbitStatus, rabbitSex }) => {
+    rabbitAwards, rabbitStatus, rabbitSex, rabbitDetails }) => {
   const [open, setOpen] = useState(false);
 
   const onOpenModal = () => setOpen(true);
@@ -42,7 +42,7 @@ const Card = ({ rabbitry, rabbitName, rabbitType, rabbitDOB,
               <p><strong>Status: </strong>{rabbitStatus}</p>
               <p><strong>Sex: </strong>{rabbitSex}</p>
             </div>
-            <button id="inquire-button" className="snap-to-bottom" onClick={() => setOpen(true)}>
+            <button id="inquire-button" onClick={() => setOpen(true)}>
                 Click here to inquire
             </button>
         </article>
@@ -55,8 +55,13 @@ const Card = ({ rabbitry, rabbitName, rabbitType, rabbitDOB,
                   {rabbitName}
                 </div>
               </div>
+              <div>
+                <p id="rabbit-details">
+                   {rabbitDetails}
+                </p>
+              </div>
               <img
-                className="card-large-img snap-to-bottom"
+                className="card-large-img"
                 height="200"
                 src={imageLarge} 
                 alt={rabbitName}

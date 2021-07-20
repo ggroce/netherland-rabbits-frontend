@@ -93,7 +93,6 @@
 } 
 
 .card-large-img {
-  margin-top: .5rem;
   height: 8rem;
   width: 8rem;
   object-fit: cover;
@@ -101,6 +100,9 @@
   border-width: 1px;
   border-radius: 8px;
   z-index: 2;
+  position: absolute;
+  bottom: .5rem; 
+  margin-left: -4rem;
 }
 
 .card-front-details {
@@ -140,9 +142,10 @@ button {
   color: #F9F3DB;
   padding: .2rem;
   margin-right: .5rem;
-}
-
-.snap-to-bottom {
   position: absolute;
   bottom: .5rem; 
+}
+
+#rabbit-details {
+  padding-top: .25rem;
 }

@@ -25,6 +25,7 @@ const CardList = ({ inventory }) => {
               rabbitAwards={rabbit.awards}
               rabbitStatus={rabbit.status}
               rabbitSex={rabbit.sex}
+              rabbitDetails={rabbit.details}
               />
             </Fade>
           </Tilt>

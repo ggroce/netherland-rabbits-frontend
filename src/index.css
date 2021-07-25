@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Ballet&family=Benne&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ballet&family=Benne&display=swap");
 
 :root {
-  font-size: calc(1em + .5vw);
+  font-size: calc(1em + 0.5vw);
   --header-height: 3em;
   --header-border-width: 2px;
   --footer-height: 7em;
@@ -9,23 +9,24 @@
   --sidebar-width: 0;
 }
 
-html, body {
+html,
+body {
   margin: auto 0;
   padding: 0;
   width: 100%;
   height: 100%;
   display: block;
   position: relative;
-  background-color: #322F1D;
-  font-family: 'Benne', serif;
+  background-color: #322f1d;
+  font-family: "Benne", serif;
   overflow: hidden;
   animation-name: fadeIn;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
   animation-duration: 1s;
-  animation-fill-mode:forwards;
+  animation-fill-mode: forwards;
   scroll-behavior: smooth;
-/*
+  /*
   font-size-adjust: none;
   text-size-adjust: none;
   -webkit-text-size-adjust: none;
@@ -37,7 +38,7 @@ html, body {
 #parent {
   height: 100%;
   width: 100%;
-  background-color: #BADDDA;
+  background-color: #baddda;
 }
 
 main {
@@ -57,10 +58,10 @@ header {
   height: var(--header-height);
   width: 100%;
   margin-left: 0px;
-  border: #4A4737;
+  border: #4a4737;
   border-width: var(--header-border-width);
   border-style: dashed;
-  background-color: #B0AB99;
+  background-color: #b0ab99;
   overflow: hidden;
   z-index: 5;
 }
@@ -85,7 +86,9 @@ header li {
 
 .push_right {
   position: absolute;
-  right: calc(var(--sidebar-width) + var(--content-spacer) + var(--content-spacer));
+  right: calc(
+    var(--sidebar-width) + var(--content-spacer) + var(--content-spacer)
+  );
 }
 
 .sidebar {
@@ -94,10 +97,10 @@ header li {
   left: 0;
   height: 100vh;
   width: var(--sidebar-width);
-  border: #4A4737;
+  border: #4a4737;
   border-width: 2px;
   border-style: dashed;
-  background-color: #B0AB99;
+  background-color: #b0ab99;
   z-index: 10;
   overflow-y: auto;
   animation-name: fadeIn;
@@ -114,35 +117,35 @@ header li {
 }
 
 #sidebar-logo-large-wrapper {
-  background-color: #4A4737; 
-  width: 7rem; 
-  height: 7rem; 
-  margin-top: .5rem; 
-  border-radius: 5px; 
-  color: #F9F3DB;
+  background-color: #4a4737;
+  width: 7rem;
+  height: 7rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  color: #f9f3db;
 }
 
 #sidebar-logo-large {
-  height: 4.5em; 
+  height: 4.5em;
   margin-top: var(--content-spacer);
-  font-family: 'Ballet', cursive;
+  font-family: "Ballet", cursive;
   font-size: 1.5rem;
   transition: all 3s ease;
   text-align: center;
 }
 
 #sidebar-logo-small-wrapper {
-  background-color: #4A4737; 
-  width: 105%; 
+  background-color: #4a4737;
+  width: 105%;
   margin-left: -2px;
-  border-radius: 5px; 
-  color: #F9F3DB;
+  border-radius: 5px;
+  color: #f9f3db;
 }
 
 #sidebar-logo-small {
-  height: 4em; 
+  height: 4em;
   margin-top: var(--content-spacer);
-  font-family: 'Ballet', cursive;
+  font-family: "Ballet", cursive;
   transition: all 2s ease;
   text-align: center;
 }
@@ -155,7 +158,7 @@ footer {
   margin-left: 0px;
   padding-left: var(--content-spacer);
   background-color: #baddda;
-  color: #4A4737;
+  color: #4a4737;
   overflow: hidden;
 }
 
@@ -168,7 +171,7 @@ footer {
   border-style: solid;
   border-radius: 5px;
   border-color: #000000;
-  background-color: #F9F3DB;
+  background-color: #f9f3db;
   margin: 5px;
   padding-left: var(--content-spacer);
   filter: drop-shadow(3px 1px 3px #636161);
@@ -181,7 +184,7 @@ footer {
   justify-content: center;
   height: calc(100vh - var(--header-height));
   min-height: calc(100vh - var(--header-height));
-  overflow-y: auto; 
+  overflow-y: auto;
 }
 
 .margin-zero {
@@ -217,7 +220,7 @@ footer {
   border-style: solid;
   border-radius: 5px;
   border-color: #000000;
-  background-color: #F9F3DB;
+  background-color: #f9f3db;
   max-width: 60em;
   margin: 1rem;
 }
@@ -233,21 +236,21 @@ footer {
 }
 
 .stitching-inverse {
-  outline: 1px dashed #F9F3DB;
+  outline: 1px dashed #f9f3db;
   outline-offset: -7px;
 }
 
 @keyframes fadeIn {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 .grow {
-  transition: all .2s ease-in-out; 
+  transition: all 0.2s ease-in-out;
 }
 .grow:hover {
   transform: scale(1.04);
@@ -265,7 +268,7 @@ footer {
 @media screen and (min-width: 40em) {
   :root {
     --header-height: 2rem;
-    --content-spacer: .5rem;
+    --content-spacer: 0.5rem;
     --sidebar-width: 5.5rem;
   }
   header {

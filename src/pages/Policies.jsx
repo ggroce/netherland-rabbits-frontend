@@ -1,17 +1,15 @@
-import React from 'react';
-import Fade from 'react-reveal/Fade';
+import React from "react";
+import Fade from "react-reveal/Fade";
 
 const policiesHeader = `Policies and Contract`;
 
 const policiesText = {
-  details1: 
-    `Please take a moment to read and understand our sales policy, the sale of any of 
+  details1: `Please take a moment to read and understand our sales policy, the sale of any of 
     our rabbits will be covered by this sales policy.  This is a standard policy that 
     has been adopted from others and tweaked from experience.  Please read prior to 
     purchase.  Thank You.  The health of your rabbit is guaranteed on the day of sale as 
-    follows:`, 
-  details2: 
-    `There are no visible signs of disease, diarrhea, eye or nasal discharge, malocclusion, 
+    follows:`,
+  details2: `There are no visible signs of disease, diarrhea, eye or nasal discharge, malocclusion, 
     infections, wounds, abscesses, broken bones or other deformities.  We guarantee 
     that the rabbit is healthy to the best of our knowledge at the time of sale.  
     We can not guarantee that the rabbit will not pick up an illness, ailment or 
@@ -24,20 +22,17 @@ const policiesText = {
     will be a good breeder or a good mother, even if they have produced for me.
     We reserve all rights to stop a sale and or cancel at any time for any reason.  
     If we cancel a sale, this will be the ONLY time we will offer a refund of payments 
-    that had been made previously.`, 
-  details3: 
-    `WE DO NOT SELL RABBITS UNDER THE AGE OF 8 WEEKS.`, 
-  details4: 
-    `All rabbits are sold on a first come first served basis.
+    that had been made previously.`,
+  details3: `WE DO NOT SELL RABBITS UNDER THE AGE OF 8 WEEKS.`,
+  details4: `All rabbits are sold on a first come first served basis.
     Once you have commit to purchasing a rabbit, a 50% NON-REFUNDABLE deposit is due 
     within five (5) days by PayPal or cash. After a deposit is received I will hold a 
     rabbit on an agreed date of pickup   If the buyer does not show up or does not call us 
     to change the date of pick up, the rabbit or rabbits will be placed back up for sale.  
     NO REFUND, NO EXCEPTIONS.Total amount must be paid in full before taking possession 
     of the rabbit.All rabbits sold must retain the prefix "La Belle"  on their name and 
-    ear tattoo must remain the same.`, 
-  details5: 
-    `Once a rabbit leaves our hands and is transported by anyone other than us we have no 
+    ear tattoo must remain the same.`,
+  details5: `Once a rabbit leaves our hands and is transported by anyone other than us we have no 
     responsibility whatsoever if something happens to the rabbit in transport.  You are 
     fully responsible for checking the rabbit from head to toe at the time of 
     pick up.  If this is not done and later a problem is found, no replacements or 
@@ -46,32 +41,24 @@ const policiesText = {
     Show but you can feed them whatever you like. If something happens to the rabbit 
     like it gets sick or breaks a bone in my possession,  I will offer a refund for that 
     rabbit or you my choose a replacement for that rabbit if we have one or until we have 
-    something you like.`, 
-  details6: 
-    `No other guarantee exist except as written here.  Buyer agrees this is a legal and 
-    binding contract.`, 
-}
+    something you like.`,
+  details6: `No other guarantee exist except as written here.  Buyer agrees this is a legal and 
+    binding contract.`,
+};
 
 function Policies(props) {
-
-  return(
+  return (
     <>
-    <Fade>
-      <div id="top" className="spacer" />
-      <div className="div-info stitching drop-shadow">
-        <h3>{policiesHeader}</h3>
-        {
-          Object.keys(policiesText).map(key => {
-            return (
-              <p key={key}>
-                {policiesText[key]} 
-              </p>
-            );
-          })
-        }
-        <p>{policiesText.details01}</p>
-      </div>
-    </Fade>
+      <Fade>
+        <div id="top" className="spacer" />
+        <div className="div-info stitching drop-shadow">
+          <h3>{policiesHeader}</h3>
+          {Object.keys(policiesText).map((key) => {
+            return <p key={key}>{policiesText[key]}</p>;
+          })}
+          <p>{policiesText.details01}</p>
+        </div>
+      </Fade>
     </>
   );
 }

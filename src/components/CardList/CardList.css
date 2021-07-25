@@ -1,5 +1,6 @@
-.tilt-wrapper:hover .card-front, .tilt-wrapper:hover .card-back {
-  box-shadow: 4px 9px 12px 5px rgba( 0, 0, 0, .3 );
+.tilt-wrapper:hover .card-front,
+.tilt-wrapper:hover .card-back {
+  box-shadow: 4px 9px 12px 5px rgba(0, 0, 0, 0.3);
   z-index: 15;
 }
 

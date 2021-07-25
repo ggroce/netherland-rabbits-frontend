@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #BADDDA;
+  background-color: #baddda;
 }
 
 .svg--reduce-size {
@@ -22,5 +22,5 @@
 
 #svg-oldtree.finished * {
   fill-opacity: 1;
-  fill: #322F1D;
+  fill: #322f1d;
 }

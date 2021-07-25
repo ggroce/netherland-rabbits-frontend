@@ -4,7 +4,7 @@
   border-style: solid;
   border-radius: 5px;
   border-color: #000000;
-  background-color: #F9F3DB;
+  background-color: #f9f3db;
 }
 
 .drop-shadow {
@@ -26,7 +26,7 @@ textarea {
 }
 
 form button {
-  padding: .5rem;
+  padding: 0.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }

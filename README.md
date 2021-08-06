@@ -8,7 +8,7 @@ Frontend for Netherland Rabbits sales website, where users can see an up-to-date
 
 ## Technologies and packages used on frontend
 * ReactJS
-* Mostly Vanilla CSS
+* Mostly vanilla CSS
 * Vivus for SVG path animation on custom SVG
 * React-router-dom and Redux
 * Various packages for card animations and transitions

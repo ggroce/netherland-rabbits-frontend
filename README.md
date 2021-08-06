@@ -15,8 +15,8 @@ Frontend for Netherland Rabbits sales website, where users can see an up-to-date
 
 ## Details on the [backend](https://github.com/ggroce/netherland-rabbits-backend "Backend: netherland-rabbits-backend")
 * NodeJS backend serving REST API for inventory queries and contact forms
-* Sendgrid nodemailer implementation used to forward inquries to website operator
-* Inventory on backend is fed from a Google Sheet
+* Sendgrid nodemailer implementation used to forward inquries through email to website operator
+* Website inventory on backend is fed from a Google Sheet
   * Provided through google-spreadsheet package
   * This makes editing of the website inventory trivial for the layperson
 

@@ -19,3 +19,4 @@ Frontend for Netherland Rabbits sales website, where users can see an up-to-date
   * Provided through google-spreadsheet package
   * This makes editing of the website inventory trivial for the layperson
 
+Both the frontend and backend have been deployed to a Digital Ocean droplet

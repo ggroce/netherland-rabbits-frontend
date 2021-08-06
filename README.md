@@ -1,4 +1,4 @@
-## [NetherlandBunnies.com](https://www.netherlandbunnies.com "NetherlandBunnies.com") ReactJS Frontend 
+## ReactJS [NetherlandBunnies.com](https://www.netherlandbunnies.com "NetherlandBunnies.com") Frontend 
 ###### (Github for NodeJS backend for this project found [here](https://github.com/ggroce/netherland-rabbits-backend "Backend: netherland-rabbits-backend"))
 
 Frontend for Netherland Rabbits sales website, where users can see an up-to-date listing of available Netherland Dwarf rabbits for sale, find out more about the purchasing process, and fill out a contact form for more information.  

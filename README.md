@@ -3,7 +3,7 @@
 Frontend for Netherland Rabbits sales website, where users can see an up-to-date listing of available Netherland Dwarf rabbits for sale, find out more about the purchasing process, and fill out a contact form for more information.  
 
 <br>
-<img src="https://media.giphy.com/media/VNwdAN45PHiLcrlSok/giphy.gif">
+<img src="https://media.giphy.com/media/2wneInSPbFnRkb5oM4/giphy.gif">
 <br>
 
 ## Technologies and packages used on frontend

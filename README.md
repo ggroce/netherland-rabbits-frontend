@@ -1,11 +1,10 @@
-# NetherlandRabbits.com Frontend
+## [NetherlandBunnies.com](https://www.netherlandbunnies.com "NetherlandBunnies.com") ReactJS Frontend 
+###### (Github for NodeJS backend for this project found [here](https://github.com/ggroce/netherland-rabbits-backend "Backend: netherland-rabbits-backend"))
 
 Frontend for Netherland Rabbits sales website, where users can see an up-to-date listing of available Netherland Dwarf rabbits for sale, find out more about the purchasing process, and fill out a contact form for more information.  
-
 <br>
 <img src="https://media.giphy.com/media/2wneInSPbFnRkb5oM4/giphy.gif">
 <br>
-
 ## Technologies and packages used on frontend
 * ReactJS
 * Mostly vanilla CSS

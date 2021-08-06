@@ -13,7 +13,7 @@ Frontend for Netherland Rabbits sales website, where users can see an up-to-date
 * React-router-dom and Redux
 * Various packages for card animations and transitions
 
-## Technologies and packages used on backend
+## Details on the [backend](https://github.com/ggroce/netherland-rabbits-backend "Backend: netherland-rabbits-backend")
 * NodeJS backend serving REST API for inventory queries and contact forms
 * Sendgrid nodemailer implementation used to forward inquries to website operator
 * Inventory on backend is fed from a Google Sheet

@@ -18,7 +18,7 @@ Frontend for Netherland Rabbits sales website, where users can see an up-to-date
 * Sendgrid nodemailer implementation used to forward inquries through email to website operator
 * Website inventory on backend is fed from a Google Sheet
   * Provided through google-spreadsheet package
-  * This makes editing of the website inventory trivial for the layperson
+  * This makes editing of the website inventory instantaneous and trivial for the layperson
 
 <br>
 Both the frontend and backend have been deployed to a Digital Ocean droplet  

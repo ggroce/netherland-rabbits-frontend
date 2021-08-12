@@ -11,7 +11,7 @@ A fully responsive frontend for Netherland Rabbits sales website, where users ca
 * ReactJS
 * Mostly vanilla CSS
 * Vivus for SVG path animation on custom SVG
-* React-router-dom and Redux
+* React-router-dom and Redux, (just cause)
 * Various packages for card animations and transitions
 <br>
 

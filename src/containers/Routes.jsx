@@ -12,13 +12,9 @@ import ScrollToTop from "../components/ScrollToTop/ScrollToTop.js";
 function Routes() {
   const dispatch = useDispatch();
 
-  const onRequestInventory = () => {
-    dispatch(requestInventory());
-  };
-
   useEffect(() => {
-    onRequestInventory();
-  }, []);
+    dispatch(requestInventory());
+  }, [dispatch]);
 
   return (
     <BrowserRouter>

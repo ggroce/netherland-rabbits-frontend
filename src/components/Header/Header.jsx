@@ -15,7 +15,7 @@ const outBoundLinks = {
   },
   link3: {
     displayName: "TRBA",
-    url: "https://www.trba.org",
+    url: "https://www.trba.net",
     title: "Texas Rabbit Breeders Association",
   },
 };

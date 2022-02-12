@@ -5,7 +5,7 @@ footer {
   width: 100%;
   margin-left: 0px;
   padding-left: var(--content-spacer);
-  background-color: #baddda;
+  background-color: transparent;
   color: #f9f3db;
   overflow: hidden;
 }

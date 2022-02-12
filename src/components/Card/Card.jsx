@@ -3,6 +3,7 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import "./Card.css";
 import InquiryForm from "../InquiryForm/InquiryForm.jsx";
+import { useEffect } from "react";
 
 const Card = ({
   rabbitry,
